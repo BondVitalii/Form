@@ -1,0 +1,61 @@
+li {
+  margin-bottom: 10px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+  cursor: pointer;
+  /* outline: 1px solid black; */
+}
+.checkbox {
+  /* Прячем изночальный чекбокс */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+/* второй вариант (более старый) спрятать чекбокс, вместо appearance: none;
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+*/
+
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+
+  border: 2px solid black;
+  border-radius: 4px;
+
+  transition: transform var(--transit);
+}
+.checkbox:checked + .icon {
+  background-color: #18a0fb;
+  /* border-color: #18a0fb; */
+  border-color: transparent;
+
+  /* background-image: url('../imag/click.svg'); */
+  background-image: url('../imag/click.svg');
+
+  background-size: contain;
+
+  background-origin: border-box;
+
+  transform: scale(1.5);
+}
+.label {
+  transition: transform var(--transit);
+}
+.checkbox:checked ~ .label {
+  transform: translateX(20px);
+}

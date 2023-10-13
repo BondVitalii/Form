@@ -1,0 +1,63 @@
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 600px;
+}
+.form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 40px;
+}
+.form-label {
+  position: absolute;
+
+  top: 50%;
+  left: 40px;
+
+  transform: translateY(-50%);
+
+  transition: transform var(--transit);
+}
+.form-input {
+  width: 100%;
+  margin: 0;
+  padding: 6px 40px;
+
+  font: inherit;
+
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-55px);
+}
+.icon-form {
+  position: absolute;
+
+  top: 25%;
+  left: 10px;
+}
+/* ---------- Btn - Кнопка отправки формы ---------- */
+.form-btn {
+  padding: 4px 8px;
+
+  font-family: var(--primary-fonts);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.27px;
+
+  background-color: var(--shadow-15);
+  border: 1px solid var(--shadow-04);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-14);
+  cursor: pointer;
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--shadow-02);
+  border-color: var(--black-bg-color);
+  box-shadow: 0px 4px 4px 0px var(--shadow-02);
+}

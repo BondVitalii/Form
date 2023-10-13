@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We are experts in trendy men's haircuts. We work quickly, carefully and with style."
+    />
+    <title>Form-module-6-lesson-1</title>
+    <!-- Fonts family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modern-normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/css-yaroslav/form-classes-1.css" />
+  </head>
+  <body>
+    <div class="wrapper-back-link">
+      <a class="back-link link" href="../index.html">Назад на главную</a>
+    </div>
+
+    <form
+      class="booking-form"
+      name="booking_form"
+      novnovaino
+      autocomplete="off"
+    >
+      <!--  input (Инпуты) -->
+      <!-- <input
+                type="text"
+                minlength="3"
+                required
+                name="user_name"
+                value="Vitalii"
+              />
+              <input type="email" required name="user_email" />
+              <div>
+                <p>Notifications</p>
+                <label>
+                  Mail
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  Phone
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  Messanger
+                  <input type="checkbox" />
+                </label>
+              </div> -->
+
+      <!-- Варианты записи и связки label + input -->
+
+      <!-- Вариант-1 label и input стоят отдельно, рядом (связка через for="" и id="") -->
+      <div class="wrapper">
+        <label for="user_name">Name</label>
+        <input
+          type="text"
+          name="user_name"
+          id="user_name"
+          placeholder="Anatoly Black"
+        />
+      </div>
+
+      <!-- Вариант-2 input в середине label  -->
+      <label>
+        Mail
+        <input type="email" name="user_email" placeholder="example@mail.com" />
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" name="user_phone" placeholder="+38 099 123-45-67" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="user_pass" placeholder=" " />
+      </label>
+
+      <!-- Выбор цвета телефона (радио-кнопки) выбор один из многих -->
+      <div>
+        <p>Phone color</p>
+        <label for="color_black">Black</label>
+        <input type="radio" name="phone_color" id="color_black" value="black" />
+        <label for="color_white">White</label>
+        <input
+          type="radio"
+          name="phone_color"
+          id="color_white"
+          value="white"
+          checked
+        />
+        <label for="color_red">Red</label>
+        <input type="radio" name="phone_color" id="color_red" value="red" />
+      </div>
+
+      <!-- Выбор платформы (чекбоксы) выбор многих из многих -->
+      <div>
+        <label>
+          Microsoft
+          <input
+            type="checkbox"
+            name="user_subscription"
+            id="microsoft"
+            value="microsoft"
+          />
+        </label>
+        <label>
+          Google
+          <input
+            type="checkbox"
+            name="user_subscription"
+            id="google"
+            value="google"
+            checked
+          />
+        </label>
+        <label>
+          Oracle
+          <input
+            type="checkbox"
+            name="user_subscription"
+            id="oracle"
+            value="oracle"
+            checked
+          />
+        </label>
+      </div>
+
+      <!-- input с типом number -->
+      <input
+        type="number"
+        name="user_temperature"
+        min="3"
+        max="15"
+        value="5"
+        step="0.5"
+      />
+
+      <!-- input с типом range -->
+      <input type="range" name="" id="" value="40" min="0" max="100" step="5" />
+
+      <!-- тег textarea (поле ввода коментария) -->
+      <textarea name="user_message"></textarea>
+
+      <button type="submit">Send</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
