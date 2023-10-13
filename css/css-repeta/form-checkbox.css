@@ -44,8 +44,7 @@ li {
   /* border-color: #18a0fb; */
   border-color: transparent;
 
-  /* background-image: url('../imag/click.svg'); */
-  background-image: url('../imag/click.svg');
+  background-image: url('../../imag/click.svg');
 
   background-size: contain;
 
