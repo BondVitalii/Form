@@ -84,13 +84,13 @@ body {
 }
 /* ---------- Кнопка назад на главную ---------- */
 .wrapper-back-link {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid black;
 }
 .back-link {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 10px;
   /* text-decoration: underline; */
   color: #18a0fb;
   background-color: #e6e6e6;
