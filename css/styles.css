@@ -114,7 +114,7 @@ body {
 
   padding: 20px;
 
-  background-color: #6fbdd2;
+  background-color: var(--shadow-12);
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -132,15 +132,39 @@ body {
   margin-bottom: 20px;
 }
 .common-list .item {
-  background-color: #7fd8f1;
-  border: 1px solid black;
+  background-color: #e6e6e6;
   border-radius: 5px;
+  /* box-shadow: 0px 4px 4px 0px var(--shadow-8); */
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
-  transition: background-color var(--transit);
+  transition: box-shadow var(--transit);
 }
-.common-list .item:hover,
-.common-list .item:focus {
-  background-color: #6fbdd2;
+.common-list.yaroslav .item {
+  color: #ff6c00;
+  border: 1px solid #ff6c00;
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.common-list.repeta .item {
+  color: #18a0fb;
+  border: 1px solid #18a0fb;
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.common-list.yaroslav .item:hover,
+.common-list.yaroslav .item:focus {
+  color: #e6e6e6;
+  background-color: #ff6c00;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px 0px var(--shadow-70);
+}
+.common-list.repeta .item:hover,
+.common-list.repeta .item:focus {
+  color: #e6e6e6;
+  background-color: #18a0fb;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px 0px var(--shadow-70);
 }
 .common-list .item:not(:nth-last-child(-n + 1)) {
   margin-bottom: 8px;
