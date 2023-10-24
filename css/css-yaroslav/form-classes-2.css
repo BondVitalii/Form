@@ -1,0 +1,30 @@
+/*---------- Form занятие-1 ----------*/
+form {
+  color: black;
+}
+.wrapper {
+  display: flex;
+}
+label {
+  display: block;
+}
+textarea {
+  line-height: 40px;
+  min-width: 40px;
+  max-height: 160px;
+  resize: vertical;
+}
+.line-decor {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid black;
+}
+/*---------- Form занятие-2 ----------*/
+.booking-form {
+  color: #fff;
+}
+/* label {
+  display: block;
+} */
