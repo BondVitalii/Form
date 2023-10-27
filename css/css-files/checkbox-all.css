@@ -1,15 +1,36 @@
-/* --------------- Чекбоксы Ярослав --------------- */
-.modal-form-agreement {
+.wrapper-checkbox-yaroslav,
+.wrapper-checkbox-repeta {
+  width: 450px;
+  min-height: 150px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid black;
+}
+.description-yaroslav,
+.description-repeta {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid gray;
+}
+.modal-form-agreement,
+.form-agreement {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   margin-bottom: 24px;
 }
-/* ----- Checkbox вариант-1 ----- */
+
+/** Чекбоксы Ярослав
+  |============================
+  | Чекбоксы Ярослав
+  |============================
+*/
+/* ================= Checkbox вариант-1 ================= */
 .modal-form-checkbox {
-  /* appearance: none; Обнуляет checkbox (прячет его) */
-  appearance: none;
+  appearance: none; /* appearance: none; Обнуляет checkbox (прячет его) */
   display: block;
   width: 16px;
   height: 16px;
@@ -28,20 +49,147 @@
   background-size: 0px;
 }
 .modal-form-checkbox:checked {
-  background-color: var(--accent-bg-color);
-  border-color: var(--accent-bg-color);
+  background-color: var(--accent-bg-cl);
+  border-color: var(--accent-bg-cl);
 
   background-size: 14px;
 }
-
+/* -------------------------- */
 .modal-form-desc {
   font-size: 12px;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.48px;
 
-  /* user-select: none; запрет копирования текста */
-  user-select: none;
+  user-select: none; /* user-select: none; запрет копирования текста */
 }
 .modal-form-link {
-  color: var(--hover-btn);
+  color: var(--accent-bg-cl);
+}
+
+/* ================= Checkbox вариант-2 ================= */
+.form-checkbox {
+  appearance: none; /* appearance: none; Обнуляет checkbox (прячет его) */
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid var(--black-text-color);
+  border-radius: 3px;
+
+  transition: background-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    border-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-size 400ms cubic-bezier(0.075, 0.82, 0.165, 1) 200ms;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z' fill='%23fff'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0px;
+}
+.form-checkbox:checked {
+  background-color: var(--accent-bg-cl);
+  border-color: var(--accent-bg-cl);
+
+  background-size: 14px;
+}
+/* ----- Кастомный checkbox ----- */
+.custom-checkbox {
+}
+.custom-checkbox-frame {
+  fill: transparent;
+  stroke: var(--black-text-color);
+  transition: 400ms;
+}
+.form-checkbox:checked + .custom-checkbox > .custom-checkbox-frame {
+  fill: var(--accent-bg-cl);
+  stroke: var(--accent-bg-cl);
+}
+.custom-checkbox-check {
+  fill: var(--white-bg-color);
+  opacity: 0;
+  transform: rotate(0) scale(0.3);
+  transition: 400ms 200ms;
+  transform-origin: center;
+}
+.form-checkbox:checked + .custom-checkbox > .custom-checkbox-check {
+  opacity: 1;
+  transform: rotate(360deg) scale(0.8);
+}
+
+/* -------------------------- */
+.form-desc {
+  font-size: 12px;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: 0.48px;
+
+  user-select: none; /* user-select: none; запрет копирования текста */
+}
+.form-link {
+  color: var(--accent-bg-cl);
+}
+
+/** Чекбоксы Repeta
+  |============================
+  | Чекбоксы Repeta
+  |============================
+*/
+li {
+  margin-bottom: 10px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  /* outline: 1px solid black; */
+}
+.checkbox {
+  /* Прячем изночальный чекбокс */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+/* второй вариант (более старый) спрятать чекбокс, вместо appearance: none;
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+*/
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+
+  border: 2px solid black;
+  border-radius: 4px;
+
+  transition: transform var(--transit);
+}
+.checkbox:checked + .icon {
+  background-color: #18a0fb;
+  /* border-color: #18a0fb; */
+  border-color: transparent;
+
+  background-image: url('../../imag/click.svg');
+
+  background-size: contain;
+
+  background-origin: border-box;
+
+  transform: scale(1.5);
+}
+.label {
+  transition: transform var(--transit);
+}
+.checkbox:checked ~ .label {
+  transform: translateX(20px);
 }

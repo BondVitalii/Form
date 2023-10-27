@@ -33,37 +33,88 @@
     <a class="back-link link" href="../index.html">Назад на главную</a>
   </div>
 
-  <!-- --------------------------------------------------------------------------- -->
-  <p>Чекбоксы Ярослав</p>
-  <!-- Checkbox вариант-1 -->
-  <label class="modal-form-agreement" for="user-agreement">
-    <!-- visually-hidden -->
-    <input
-      class="modal-form-checkbox"
-      type="checkbox"
-      name="user-agreement"
-      id="user-agreement"
-      required
-      data-modal-checkbox
-    />
-    <!------- Кастомный checkbox (Дополнительный/второй вариант checkbox) ------->
-    <!-- <svg class="custom-checkbox" width="16" height="16">
-              <use
-                class="custom-checkbox-frame"
-                href="./images/icons.svg#icon-checbox"
-              ></use>
-              <use
-                class="custom-checkbox-check"
-                href="./images/icons.svg#icon-check"
-              ></use>
-            </svg> -->
-    <!-- --------------------- -->
+  <!-- !!!!!!!!!!!!!!!!! Checkbox-Yaroslav !!!!!!!!!!!!!!!!! -->
+  <!-- _____________________________________________________ -->
 
-    <span class="modal-form-desc"
-      >I accept the terms and conditions of the
-      <a class="modal-form-link" href="" target="_blank"
-        >Privacy Policy</a
-      ></span
-    >
-  </label>
+  <div class="wrapper-checkbox-yaroslav">
+    <p class="description-yaroslav">Чекбоксы Ярослав</p>
+
+    <!-- ================= Checkbox вариант-1 ================= -->
+    <label class="modal-form-agreement" for="user-agreement">
+      <input
+        class="modal-form-checkbox"
+        type="checkbox"
+        name="user-agreement"
+        id="user-agreement"
+        required
+        data-modal-checkbox
+      />
+      <span class="modal-form-desc"
+        >I accept the terms and conditions of the
+        <a class="modal-form-link" href="" target="_blank"
+          >Privacy Policy</a
+        ></span
+      >
+    </label>
+
+    <!-- ================= Checkbox вариант-2 (кастомный checkbox) ================= -->
+    <label class="form-agreement" for="agreement">
+      <input
+        class="form-checkbox visually-hidden"
+        type="checkbox"
+        name="agreement"
+        id="agreement"
+        required
+        data-modal-checkbox
+      />
+      <!-- Кастомный checkbox -->
+
+      <svg class="custom-checkbox" width="16" height="16">
+        <use
+          class="custom-checkbox-frame"
+          href="../imag/icons.svg#icon-checbox"
+        ></use>
+        <use
+          class="custom-checkbox-check"
+          href="../imag/icons.svg#icon-check"
+        ></use>
+      </svg>
+      <!-- --------------------- -->
+      <span class="form-desc"
+        >I accept the terms and conditions of the
+        <a class="form-link" href="" target="_blank">Privacy Policy</a></span
+      >
+    </label>
+  </div>
+
+  <!-- !!!!!!!!!!!!!!!!! Checkbox-Repeta !!!!!!!!!!!!!!!!! -->
+  <!-- ___________________________________________________ -->
+
+  <div class="wrapper-checkbox-repeta">
+    <p class="description-repeta">Чекбоксы Репета</p>
+
+    <ul class="list">
+      <li>
+        <label class="field">
+          <input class="checkbox" type="checkbox" name="topic" value="html" />
+          <span class="icon"></span>
+          <span class="label">HTML</span>
+        </label>
+      </li>
+      <li>
+        <label class="field">
+          <input class="checkbox" type="checkbox" name="topic" value="css" />
+          <span class="icon"></span>
+          <span class="label">CSS</span>
+        </label>
+      </li>
+      <li>
+        <label class="field">
+          <input class="checkbox" type="checkbox" name="topic" value="js" />
+          <span class="icon"></span>
+          <span class="label">JavaScript</span>
+        </label>
+      </li>
+    </ul>
+  </div>
 </body>

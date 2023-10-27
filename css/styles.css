@@ -17,6 +17,7 @@
   --black-bg-color: #000000;
   --logo-grey-color: #cccccc;
   --logo-black-color: #000000;
+  --accent-bg-cl: #ff6c00;
   /* Shadow */
   --shadow-01: rgba(0, 0, 0, 0.01);
   --shadow-02: rgba(0, 0, 0, 0.2);
@@ -64,6 +65,19 @@ li {
 }
 .link {
   text-decoration: none;
+}
+/*__________ Visually-hidden __________*/
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 /*__________ Basic style __________*/
 body {
