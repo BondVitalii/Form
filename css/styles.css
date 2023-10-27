@@ -124,8 +124,9 @@ body {
   border: 1px solid black;
   border-radius: 5px;
 }
-.common-list.yaroslav {
-  margin-bottom: 20px;
+.common-list.yaroslav,
+.common-list.yaroslav-repeta {
+  margin-bottom: 10px;
 }
 .common-list .item {
   background-color: #e6e6e6;
@@ -135,32 +136,6 @@ body {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
   transition: box-shadow var(--transit);
-}
-.common-list.yaroslav .item {
-  color: #ff6c00;
-  border: 1px solid #ff6c00;
-  transition: color var(--transit), background-color var(--transit),
-    border-color var(--transit);
-}
-.common-list.repeta .item {
-  color: #18a0fb;
-  border: 1px solid #18a0fb;
-  transition: color var(--transit), background-color var(--transit),
-    border-color var(--transit);
-}
-.common-list.yaroslav .item:hover,
-.common-list.yaroslav .item:focus {
-  color: #e6e6e6;
-  background-color: #ff6c00;
-  border-color: transparent;
-  box-shadow: 0px 4px 4px 0px var(--shadow-70);
-}
-.common-list.repeta .item:hover,
-.common-list.repeta .item:focus {
-  color: #e6e6e6;
-  background-color: #18a0fb;
-  border-color: transparent;
-  box-shadow: 0px 4px 4px 0px var(--shadow-70);
 }
 .common-list .item:not(:nth-last-child(-n + 1)) {
   margin-bottom: 14px;
@@ -172,4 +147,46 @@ body {
 }
 .common-list .link {
   color: currentColor;
+}
+/* --------------------------------------------------------------- */
+.common-list.yaroslav-repeta .item {
+  color: #31d447;
+  border: 1px solid #31d447;
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.common-list.yaroslav-repeta .item:hover,
+.common-list.yaroslav-repeta .item:focus {
+  color: #e6e6e6;
+  background-color: #31d447;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px 0px var(--shadow-70);
+}
+/* --------------------------------------------------------------- */
+.common-list.yaroslav .item {
+  color: #ff6c00;
+  border: 1px solid #ff6c00;
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.common-list.yaroslav .item:hover,
+.common-list.yaroslav .item:focus {
+  color: #e6e6e6;
+  background-color: #ff6c00;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px 0px var(--shadow-70);
+}
+/* --------------------------------------------------------------- */
+.common-list.repeta .item {
+  color: #18a0fb;
+  border: 1px solid #18a0fb;
+  transition: color var(--transit), background-color var(--transit),
+    border-color var(--transit);
+}
+.common-list.repeta .item:hover,
+.common-list.repeta .item:focus {
+  color: #e6e6e6;
+  background-color: #18a0fb;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px 0px var(--shadow-70);
 }
