@@ -11,7 +11,7 @@
 
   padding: 30px 20px 20px;
 
-  outline: 1px solid var(--shadow-04);
+  outline: 1px solid red;
 }
 .form-field {
   display: flex;
@@ -63,25 +63,24 @@
 .form .date {
   font-size: 15px;
   color: green;
-  border: 4px solid blueviolet;
+  border: 1px solid blueviolet;
 }
 /* ---------- Поле коментария ---------- */
-/* Запрет растягивать поле
-textarea { resize: none;} - Это запрет пользователь растягивать поле */
-
 textarea {
-  resize: none;
+  resize: none; /* resize: none; - запрет растягивать поле textarea */
 }
 .comment {
   height: 100px;
   padding: 10px;
-  border: 1px solid blue;
-  border-radius: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
 }
 /* ---------- Соглашение ---------- */
 .form-field.agreement {
   display: flex;
+  flex-direction: row;
   align-items: baseline;
+  gap: 10px;
 }
 /* ---------- Btn - Кнопка отправки формы ---------- */
 .form-btn {
