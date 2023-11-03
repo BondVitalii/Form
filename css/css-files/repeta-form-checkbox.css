@@ -10,12 +10,13 @@ li {
 }
 .checkbox {
   /* Прячем изночальный чекбокс */
+  appearance: none; /* appearance: none; прячем изночальный checkbox - Это современный вариант*/
+  position: absolute;
+  /* Прячем изночальный чекбокс второй вариант через Автопрефиксер CSS онлайн - Это когда appearance: none; работал не во всех браузерах*/
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  position: absolute;
 }
-/* второй вариант (более старый) спрятать чекбокс, вместо appearance: none;
+/* Прячем изночальный чекбокс третий вариант (более старый) спрятать чекбокс, вместо appearance: none;
 .checkbox {
   position: absolute;
   width: 1px;
@@ -41,16 +42,16 @@ li {
 }
 .checkbox:checked + .icon {
   background-color: #18a0fb;
-  /* border-color: #18a0fb; */
-  border-color: transparent;
+  /* border-color: #18a0fb; */ /* Закрашиваем бордер или делаем прозрачной с помощью border-color: transparent;. */
+  border-color: transparent; /* Рамку делаем прозрачной. */
 
   background-image: url('../../imag/click.svg');
 
-  background-size: contain;
+  background-size: contain; /* Гарантированно сохраняет пропорции изображения. */
 
-  background-origin: border-box;
+  background-origin: border-box; /* Распространяется на border + padding + content. */
 
-  transform: scale(1.5);
+  transform: scale(1.5); /* Увеличиваем (зумируем) checkbox  */
 }
 .label {
   transition: transform var(--transit);
